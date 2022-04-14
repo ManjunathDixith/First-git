@@ -1,0 +1,11 @@
+
+.row{
+    width: 800px;
+    height: 550px;
+    margin: 0 auto;
+    background-color: lightblue;
+    border-top: 2px solid orange;
+    border-left: 2px solid orange;
+    border-right: 2px solid lightgreen;
+    border-bottom: 2px solid lightgreen;
+}

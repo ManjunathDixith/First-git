@@ -1,0 +1,44 @@
+<div class="main">
+  <p>The Date is {{today | date:'MMM d, y, h:mm:ss a'}}</p>
+  <h2><span>SignIn</span> Here</h2>
+<form  [formGroup]="signinForm">
+  <div class="form-group">
+    <label for="fname"> <h5><span>First</span> Name:</h5></label>
+    <input type="text" class="form-control input-sm" id="usr" placeholder="Enter Your Firstname" formControlName="fname">
+  <span  style="color: red;" *ngIf="fname && fname.invalid && fname.touched">Firstname should have atleast 4 Letters </span>
+  </div>
+  <div class="form-group">
+    <label for="lname"> <h5><span>Last</span> Name:</h5></label>
+    <input type="text" class="form-control input-sm" id="usr"  placeholder="Enter Your Lastname" formControlName="lname">
+    <span style="color: red;" *ngIf="lname && lname.invalid && lname.touched">Lastname should have atleast 4 Letters</span>
+  </div>
+    <div class="form-group">
+    <label for="birthday"> <h5><span>Birth</span>day:</h5></label>
+    <input type="date" class="form-control input-sm" id="usr" name="birthday" formControlName="birthday">
+    </div>
+  <div class="form-group">
+    <label for="email"> <h5><span>E</span>mail:</h5></label>
+    <input type="text" class="form-control input-sm" id="usr"  placeholder="Enter Your Email" formControlName="email">
+    <span style="color: red;" *ngIf="email && email.invalid && email.touched">Enter Your Email Correctly</span> 
+  </div>
+  <div class="form-group">
+    <label for="phnumber"> <h5><span>Phone</span> Number:</h5></label>
+    <input type="text" class="form-control input-sm" id="usr"  placeholder="Enter Your Telephone number" formControlName="phnumber">
+    <span style="color: red;" *ngIf="phnumber && phnumber.invalid && phnumber.touched">Please enter 10 Digit Mobile Number</span>
+  </div>
+  <div class="form-group">
+    <label for="password"> <h5><span>Pass</span>word:</h5></label>
+    <input type="password" class="form-control input-sm" id="usr"  placeholder="Enter Your Password" formControlName="password">
+    <span style="color: red;" *ngIf="password && password.invalid && password.touched">Enter Your Password Correctly</span> 
+  </div>
+  <div class="form-group">
+    <label for="confirmpassword"> <h5><span>Confirm</span> Password:</h5></label>
+    <input type="password" class="form-control input-sm" id="usr"  placeholder="Confirm Password" formControlName="confirmpassword">
+    <span style="color: red;" *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched">Password should match</span> 
+  </div>  
+</form>
+<br><br>
+<button type="submit" class="btn btn-primary btn-lg"  (click)="submitForm(signinForm)" [disabled]="signinForm.invalid" >Register</button>
+
+</div>
+

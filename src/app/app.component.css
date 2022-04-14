@@ -1,0 +1,42 @@
+*{
+  display: inline-block;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+  height: 55px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 4px;
+  text-decoration: none;
+  font-size: 25px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.right{
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+ul li{
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+a{
+  color: white;
+}
